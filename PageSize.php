@@ -5,7 +5,7 @@
  * @version 1.0.0
  */
  
-namespace app\widgets;
+namespace nterms;
 
 use yii\helpers\Html;
 
