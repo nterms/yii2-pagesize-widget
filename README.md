@@ -49,6 +49,20 @@ following example.
 
 Please note that `per-page` here is the string you use for `pageSizeParam` setting of the PageSize widget.
 
+Configurations
+--------------
+
+Following properties are available for customizing the widget.
+
+- `label`: Text for the lbel
+- `defaultPageSize`: This value will be used if there's no page size selected
+- `pageSizeParam`: The name of the page size parameter used for the pagination widget in your grid view
+- `sizes`: An array of key values to be used as page sizes. Both kay and value should be integers
+- `template`: A template string to be used for rendering the elements. Default is `'{list} {label}'`
+- `options`: HTML attributes for the `<select>` element
+- `labelOptions`: HTML attributes for the `<label>` element
+- `encodeLabel`: Whether to encode label text
+
 License
 -------
 
