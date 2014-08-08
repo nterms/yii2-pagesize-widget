@@ -1,0 +1,23 @@
+{
+    "name": "nterms/yii2-pagesize-widget",
+    "description": "Widget for enabling dynamic page size selection on GridView",
+    "keywords": ["yii2", "extension", "widget", "grid-view", "page-size"],
+    "homepage": "https://github.com/nterms/yii2-pagesize-widget",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Saranga Abeykoon",
+            "email": "amisaranga@gmail.com",
+            "homepage": "http://nterms.com/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "nterms\\": ""
+        }
+    }
+}
