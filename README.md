@@ -30,7 +30,7 @@ Usage
 To use this widget with a GridView, add this widget to the view where the GridView is:
 
 ~~~php
-<?php echo \nterms\PageSize::widget(); ?>
+<?php echo \nterms\pagesize\PageSize::widget(); ?>
 ~~~
 
 and set the `filterSelector` property of GridView as shown in 
