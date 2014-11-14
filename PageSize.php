@@ -5,7 +5,7 @@
  * @version 1.0.0
  */
  
-namespace nterms;
+namespace nterms\pagesize;
 
 use yii\helpers\Html;
 
