@@ -1,7 +1,7 @@
 yii2-pagesize-widget
 ====================
 
-PageSize widget is an addition to the [Yii2](https://github.com/yiisoft/yii2) [GridView](http://www.yiiframework.com/doc-2.0/yii-grid-gridview.html) that enables
+PageSize widget is an extension to the [Yii2](https://github.com/yiisoft/yii2) [GridView](http://www.yiiframework.com/doc-2.0/yii-grid-gridview.html) that enables
 changing the size of a page on GridView.
 
 [![Latest Stable Version](https://poser.pugx.org/nterms/yii2-pagesize-widget/v/stable)](https://packagist.org/packages/nterms/yii2-pagesize-widget) [![Total Downloads](https://poser.pugx.org/nterms/yii2-pagesize-widget/downloads)](https://packagist.org/packages/nterms/yii2-pagesize-widget) [![Latest Unstable Version](https://poser.pugx.org/nterms/yii2-pagesize-widget/v/unstable)](https://packagist.org/packages/nterms/yii2-pagesize-widget) [![License](https://poser.pugx.org/nterms/yii2-pagesize-widget/license)](https://packagist.org/packages/nterms/yii2-pagesize-widget)
