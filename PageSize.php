@@ -96,7 +96,7 @@ class PageSize extends \yii\base\Widget
 		
 		$perPage = !empty($_GET[$this->pageSizeParam]) ? $_GET[$this->pageSizeParam] : $this->defaultPageSize;
 		
-		$listHtml = Html::dropDownList('per-page', $perPage, $this->sizes, $this->options);
+		$listHtml = Html::dropDownList($this->pageSizeParam, $perPage, $this->sizes, $this->options);
 		$labelHtml = Html::label($this->label, $this->options['id'], $this->labelOptions);
 		
 		$output = str_replace(['{list}', '{label}'], [$listHtml, $labelHtml], $this->template);
