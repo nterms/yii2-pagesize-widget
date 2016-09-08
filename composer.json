@@ -1,8 +1,8 @@
 {
-    "name": "nterms/yii2-pagesize-widget",
+    "name": "dieruckus/yii2-pagesize-widget",
     "description": "Widget for enabling dynamic page size selection on GridView",
     "keywords": ["yii2", "extension", "widget", "grid-view", "page-size"],
-    "homepage": "https://github.com/nterms/yii2-pagesize-widget",
+    "homepage": "https://github.com/dieruckus/yii2-pagesize-widget",
     "type": "yii2-extension",
     "license": "MIT",
     "authors": [
