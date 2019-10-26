@@ -93,8 +93,8 @@ class PageSize extends \yii\base\Widget
 		if($this->encodeLabel) {
 			$this->label = Html::encode($this->label);
 		}
-		
-		$perPage = !empty($_GET[$this->pageSizeParam]) ? $_GET[$this->pageSizeParam] : $this->defaultPageSize;
+
+        $perPage = isset($_POST) && count($_POST) ? self::findSelectedPageSize($_POST) : self::findSelectedPageSize($_GET);
 		
 		$listHtml = Html::dropDownList($this->pageSizeParam, $perPage, $this->sizes, $this->options);
 		$labelHtml = Html::label($this->label, $this->options['id'], $this->labelOptions);
@@ -103,4 +103,42 @@ class PageSize extends \yii\base\Widget
 		
 		return $output;
 	}
+
+    /**
+     * Find selected page size key in request array or return default value
+     * @param $request
+     * @return int
+     */
+    private function findSelectedPageSize($request) :int{
+
+        if (strpos($this->pageSizeParam, '[') !== false) {
+            $keys = preg_split("/[\[\]]/", $this->pageSizeParam, 0,PREG_SPLIT_NO_EMPTY);
+            $selectedPageSize = self::findPageSizeInRequest($keys, $request);
+        } else {
+            $selectedPageSize = !empty($request[$this->pageSizeParam]) ? $request[$this->pageSizeParam] : $this->defaultPageSize;
+        }
+
+        return $selectedPageSize ?? $this->defaultPageSize;
+    }
+
+    /**
+     * Find page size key in request array recursive
+     * @param $keys
+     * @param $request
+     * @return int
+     */
+    private function findPageSizeInRequest($keys, $request): int{
+        foreach ($keys as $i => $key){
+            if(isset($request[$key]) && is_array($request[$key])){
+                unset($keys[$i]);
+                $selectedPageSize = self::findPageSizeInRequest($keys, $request[$key]);
+                break;
+            } else {
+                $selectedPageSize = $request[$key] ?? $this->defaultPageSize;
+                break;
+            }
+        }
+
+        return $selectedPageSize ?? $this->defaultPageSize;
+    }
 }
