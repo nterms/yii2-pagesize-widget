@@ -128,15 +128,13 @@ class PageSize extends \yii\base\Widget
      * @return int
      */
     private function findPageSizeInRequest($keys, $request): int{
-        foreach ($keys as $i => $key){
-            if(isset($request[$key]) && is_array($request[$key])){
-                unset($keys[$i]);
-                $selectedPageSize = self::findPageSizeInRequest($keys, $request[$key]);
-                break;
-            } else {
-                $selectedPageSize = $request[$key] ?? $this->defaultPageSize;
-                break;
-            }
+        if(isset($request[$keys[0]]) && is_array($request[$keys[0]])){
+            $key = $keys[0];
+            unset($keys[0]);
+            $keys = array_values($keys);
+            $selectedPageSize = self::findPageSizeInRequest($keys, $request[$key]);
+        } else {
+            $selectedPageSize = isset($request[$keys[0]]) ? $request[$keys[0]] : $this->defaultPageSize;
         }
 
         return $selectedPageSize ?? $this->defaultPageSize;
