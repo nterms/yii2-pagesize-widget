@@ -94,7 +94,7 @@ class PageSize extends \yii\base\Widget
 			$this->label = Html::encode($this->label);
 		}
 
-        $perPage = isset($_POST) && count($_POST) ? self::findSelectedPageSize($_POST) : self::findSelectedPageSize($_GET);
+        $perPage = isset($_POST) && count($_POST) ? $this->findSelectedPageSize($_POST) : $this->findSelectedPageSize($_GET);
 
 		$listHtml = Html::dropDownList($this->pageSizeParam, $perPage, $this->sizes, $this->options);
 		$labelHtml = Html::label($this->label, $this->options['id'], $this->labelOptions);
