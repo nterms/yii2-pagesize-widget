@@ -14,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist nterms/yii2-pagesize-widget "*"
+composer require --prefer-dist firegroup/fire-widget-page-size "*"
 ```
 
 or add
 
 ```
-"nterms/yii2-pagesize-widget": "*"
+"firegroup/fire-widget-page-size": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -32,7 +32,7 @@ Usage
 To use this widget with a GridView, add this widget to the view where the GridView is:
 
 ~~~php
-<?php echo \nterms\pagesize\PageSize::widget(); ?>
+<?php echo \firegroup\widgets\pagesize\PageSize::widget(); ?>
 ~~~
 
 and set the `filterSelector` property of GridView as shown in 

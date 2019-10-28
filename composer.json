@@ -1,8 +1,7 @@
 {
-    "name": "nterms/yii2-pagesize-widget",
+    "name": "firegroup/fire-widget-page-size",
     "description": "Widget for enabling dynamic page size selection on GridView",
     "keywords": ["yii2", "extension", "widget", "grid-view", "page-size"],
-    "homepage": "https://github.com/nterms/yii2-pagesize-widget",
     "type": "yii2-extension",
     "license": "MIT",
     "authors": [
@@ -10,14 +9,25 @@
             "name": "Saranga Abeykoon",
             "email": "amisaranga@gmail.com",
             "homepage": "http://nterms.com/"
+        },
+        {
+            "name": "Jan Straka",
+            "email": "j.straka@firegroup.com"
         }
     ],
+    "support": {
+        "slack": "slack://channel?team=T03U8RQBM&id=CKTNVFJLU",
+        "wiki": "http://fg.ch:7070/FIRECore/fire/wiki",
+        "source": "https://github.com/nterms/yii2-pagesize-widget",
+        "git" : "http://fg.ch:7070/FIREEXT/fire-widget-page-size",
+        "readme": "http://fg.ch:7070/FIREEXT/fire-widget-page-size/src/branch/master/README.md"
+    },
     "require": {
         "yiisoft/yii2": "*"
     },
     "autoload": {
         "psr-4": {
-            "nterms\\pagesize\\": ""
+            "firegroup\\widgets\\pagesize\\": "src"
         }
     }
 }
